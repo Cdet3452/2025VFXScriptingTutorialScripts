@@ -1,6 +1,6 @@
 --This will be ordered from how the video starts, This is the best spot to start if your following along.
 
-Cloning:
+--Cloning:
 
 --Get all player related references
 local player = game.Players.LocalPlayer
@@ -21,7 +21,7 @@ uis.InputBegan:Connect(function(input, v)
 	if v then return end
 	if input.KeyCode == KEY then
 		--like stated above this clones the Sphere, then positions it on you, then sizes it, then puts it in the fx folder to fix up clutter
-		
+
 		local Sphere = rs.Fx.Sphere:Clone()
 		Sphere.CFrame = workspace.Week14Progress.Day2.Start.CFrame
 		Sphere.Size = Vector3.new(0, 0, 0)
@@ -55,7 +55,7 @@ end
 
 --And this is the lights, beams, and trails you can add into the code above:
 
-    if Particle:IsA("Beam") then
+  		  if Particle:IsA("Beam") then
 			Particle.Enabled = enabled
 		end
 		if Particle:IsA("Trail") then
