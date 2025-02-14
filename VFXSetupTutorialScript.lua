@@ -102,5 +102,19 @@ local function ColorCorrectionEffect()
 	end)
 end
 
+--This is the extra code that was leftout to clone the second particle
 
+local SphereEmit = rs.VFX.TutorialEffectEmit:Clone()
+SphereEmit.CFrame = workspace.Main.CFrame
+SphereEmit.Size = Vector3.new(5, 5, 5)
+SphereEmit.Parent = workspace.Fx
+		
+--And this was the delay with the effect incase it was complicated
+	
+emitParticles(SphereEmit)
+enableParticles(Sphere, true)
+		
+task.wait(2)
+		
+enableParticles(Sphere)
 	
